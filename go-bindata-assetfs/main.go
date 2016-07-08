@@ -30,7 +30,14 @@ func main() {
 		os.Exit(1)
 	}
 
-	cmd := exec.Command(bindataCmd, os.Args[1:]...)
+	var args []string
+	if debug {
+		args = append(args, "debug")
+	}
+
+	args = append(args, flag.Args()...)
+
+	cmd := exec.Command(bindataCmd, args...)
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
