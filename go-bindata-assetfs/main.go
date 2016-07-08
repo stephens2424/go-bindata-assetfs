@@ -26,7 +26,7 @@ func main() {
 
 	if _, err := exec.LookPath(bindataCmd); err != nil {
 		log.Println("Cannot find go-bindata executable in path")
-		log.Println("Maybe you need: go get github.com/elazarl/go-bindata-assetfs/...")
+		log.Println("Maybe you need: go get github.com/stephens2424/go-bindata-assetfs/...")
 		os.Exit(1)
 	}
 
@@ -61,7 +61,7 @@ func main() {
 			if debug {
 				fmt.Fprintln(out, "\t\"net/http\"")
 			} else {
-				fmt.Fprintln(out, "\t\"github.com/elazarl/go-bindata-assetfs\"")
+				fmt.Fprintln(out, "\t\"github.com/stephens2424/go-bindata-assetfs\"")
 			}
 			done = true
 		}
